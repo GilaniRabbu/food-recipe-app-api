@@ -177,6 +177,7 @@ picture {
     border-radius: 1rem;
     width: 90%;
     height: 90%;
+    display: none;
     overflow: scroll;
     padding: 2em 0;
 }
@@ -268,6 +269,13 @@ picture {
 
 .recipe-link a:hover {
     text-decoration: underline;
+}
+
+.not-found {
+    color: var(--clr-primary-100);
+    grid-template-columns: 1fr !important;
+    font-weight: 600;
+    width: 100%;
 }
 
 /* JS Related */
