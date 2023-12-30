@@ -68,8 +68,6 @@ picture {
     margin-inline: auto;
     padding: 2em;
     text-align: center;
-    background: #EEE;
-    border: 1px solid;
 }
 
 .meal-search {
@@ -163,6 +161,119 @@ picture {
 
 
 
+/* Meal Details */
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #FFF;
+    background: var(--clr-primary-100);
+    border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow: scroll;
+    padding: 2em 0;
+}
+
+.meal-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+    background: #151515;
+    border-radius: 2rem;
+}
+
+/* Meal Details */
+
+
+
+/* JS Related */
+
+.showRecipe {
+    display: block;
+}
+
+.meal-details-content {
+    margin: 2em;
+}
+
+.meal-details-content p:not(.recipe-category) {
+    padding: 1em 0;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 30px;
+    height: 30px;
+    color: #151515;
+    background: #FFF;
+    border: 0;
+    border-radius: 50%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-title {
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+}
+
+.recipe-category {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    color: var(--clr-primary-100);
+    background: #FFF;
+}
+
+.recipe-instruct {
+    padding: 1em 0;
+}
+
+.recipe-meal-img img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recipe-link {
+    margin: 1.4em 0;
+}
+
+.recipe-link a {
+    color: #FFF;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.recipe-link a:hover {
+    text-decoration: underline;
+}
+
+/* JS Related */
+
+
+
 @media (min-width: 700px) {
     .meal-search-box {
         width: 540px;
@@ -180,6 +291,10 @@ picture {
 
     .meal-item {
         margin: 0;
+    }
+
+    .meal-details {
+        width: 700px;
     }
 }
 
