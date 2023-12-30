@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Food Recipe App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">
+                    Find Meals For Your Ingredients
+                </h2>
+                <blockquote class="text">
+                    Real Food doesn't have ingredients,
+                    real food is ingredients.
+                    <cite>- James</cite>
+                </blockquote>
+
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" id="search-input" placeholder="Enter an ingredient">
+                    <button type="submit" class="btn search-btn" id="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                <div id="meal">
+                    <!-- Meal Item -->
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="images/food-01.jpg" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3 class="item-title">Noodles</h3>
+                            <a href="#" class="recipe-btn" id="recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>
+                    <!-- Meal Item -->
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="images/food-01.jpg" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3 class="item-title">Noodles</h3>
+                            <a href="#" class="recipe-btn" id="recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>
+                    <!-- Meal Item -->
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="images/food-01.jpg" alt="...">
+                        </div>
+                        <div class="meal-name">
+                            <h3 class="item-title">Noodles</h3>
+                            <a href="#" class="recipe-btn" id="recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-details">
+                <!-- recipe close btn -->
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+
+                <!-- meal content -->
+                <div class="meal-details-content">
+                    <h2 class="recipe-title">Meals Name Here</h2>
+                    <p class="recipe-category">Category Name</p>
+                    <div class="recipe-instruct">
+                        <h3>Instructions:</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Accusantium a placeat beatae nam magnam? Obcaecati
+                            ducimus aperiam nesciunt sequi rerum facere nostrum,
+                            esse nemo magni quam minus numquam temporibus voluptatem
+                            vel quo harum eum dicta culpa aliquam. Sunt eveniet quam
+                            quibusdam iure non ipsa in, doloremque pariatur numquam.
+                        </p>
+                    </div>
+                    <div class="recipe-meal-img">
+                        <img src="images/food-01.jpg" alt="...">
+                    </div>
+                    <div class="recipe-link">
+                        <a href="#" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

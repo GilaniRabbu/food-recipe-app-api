@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+:root {
+    --fs-h1-clamp: clamp(2.4rem, 1.0184rem + 2.683vw, 3.4331rem);
+    --fs-h2-clamp: clamp(1.5rem, 0.8818rem + 2.0723vw, 2.5rem);
+    --fs-h3-clamp: clamp(1.325rem, 0.7607rem + 1.75vw, 2.125rem);
+    --fs-body-clamp: clamp(0.9rem, 0.6548rem + 1.2259vw, 1.2581rem);
+    --fs-small-clamp: clamp(0.625rem, 0.4821rem + 0.7143vw, 1.125rem);
+    --fs-h1: var(--fs-h1-clamp);
+    --fs-h2: var(--fs-h2-clamp);
+    --fs-h3: var(--fs-h3-clamp);
+    --fs-h4: var(--fs-h4-clamp);
+    --fs-body: var(--fs-body-clamp);
+    --fs-small: var(--fs-small-clamp);
+
+    --clr-primary-100: #828DDC;
+    --clr-primary-200: #40529C;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: var(--fs-body);
+    font-family: 'League Spartan', sans-serif;
+}
+
+img,
+svg,
+video,
+picture {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text {
+    opacity: 0.85;
+}
+
+.title {
+    font-size: var(--fs-h2);
+    margin-bottom: 0.75em;
+}
+
+.meal-wrapper {
+    width: min(75rem, 100% - 4rem);
+    margin-inline: auto;
+    padding: 2em;
+    text-align: center;
+    background: #EEE;
+    border: 1px solid;
+}
+
+.meal-search {
+    margin: 2em 0;
+}
+
+.meal-search-box {
+    margin: 1.2em 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-control,
+.search-btn {
+    width: 100%;
+}
+
+.search-control {
+    padding: 0 1em;
+    outline: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: var(--clr-primary-100);
+    border: 1px solid var(--clr-primary-100);
+}
+
+.search-control::placeholder {
+    color: var(--clr-primary-100);
+}
+
+.search-btn {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    color: #FFF;
+    background: var(--clr-primary-100);
+}
+
+.search-btn:hover {
+    background: var(--clr-primary-200);
+}
+
+.meal-result {
+    margin-top: 4em;
+}
+
+.meal-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 2em 0;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+}
+
+.meal-img img {
+    width: 100%;
+}
+
+.meal-name {
+    padding: 1.5em 0.5em;
+}
+
+.item-title {
+    padding-block-end: 0.75em;
+}
+
+.recipe-btn {
+    color: #FFF;
+    background: var(--clr-primary-100);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.75em 1em;
+    margin: 1em auto;
+    border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.recipe-btn:hover {
+    background: var(--clr-primary-200);
+}
+
+
+
+@media (min-width: 700px) {
+    .meal-search-box {
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .meal-item {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #meal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
