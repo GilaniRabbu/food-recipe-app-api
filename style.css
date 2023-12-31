@@ -125,7 +125,7 @@ picture {
     border-radius: 1rem;
     overflow: hidden;
     margin: 2em 0;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.75);
 }
 
 .meal-img img {
@@ -187,7 +187,7 @@ picture {
 }
 
 .meal-details::-webkit-scrollbar-thumb {
-    background: #151515;
+    background: var(--clr-primary-200);
     border-radius: 2rem;
 }
 
@@ -215,7 +215,7 @@ picture {
     right: 2em;
     width: 30px;
     height: 30px;
-    color: #151515;
+    color: var(--clr-primary-100);
     background: #FFF;
     border: 0;
     border-radius: 50%;
