@@ -12,8 +12,10 @@ RecipeCloseBtn.addEventListener('click', () => {
 });
 
 function GetMealList() {
-    let SearchInput = document.getElementById('search-input').value.trim();
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${SearchInput}`)
+    let SearchInput = document.getElementById('search-input');
+    let InputValue = SearchInput.value.trim();
+
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${InputValue}`)
         .then(res => res.json())
         .then(data => {
             let html = "";
@@ -37,12 +39,16 @@ function GetMealList() {
                 MealList.classList.add('not-found');
             }
             MealList.innerHTML = html;
+
+            // Clear the input field
+            SearchInput.value = "";
         });
 }
 
 // Get recipe of the meal
 function GetMealRecipe(e) {
     e.preventDefault();
+
     if (e.target.classList.contains('recipe-btn')) {
         let MealItem = e.target.parentElement.parentElement;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${MealItem.dataset.id}`)
